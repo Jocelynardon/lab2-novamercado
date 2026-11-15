@@ -1,0 +1,14 @@
+# Datos y credenciales: NO van al repo
+data/*
+!data/.gitkeep
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Artefactos locales
+mlruns/
+mlartifacts/

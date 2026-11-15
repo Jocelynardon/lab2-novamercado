@@ -1,0 +1,11 @@
+FROM apache/airflow:3.0.6-python3.12
+
+COPY requirements/airflow.txt /tmp/requirements.txt
+# Se fija apache-airflow a la versión de la imagen para que pip no la cambie
+RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" -r /tmp/requirements.txt
+
+# Código compartido del producto (mismo paquete que usa la API)
+ENV PYTHONPATH=/opt/airflow/proyecto
+COPY --chown=airflow:root novamercado/ /opt/airflow/proyecto/novamercado/
+COPY --chown=airflow:root sql/ /opt/airflow/proyecto/sql/
+COPY --chown=airflow:root dags/ /opt/airflow/dags/
