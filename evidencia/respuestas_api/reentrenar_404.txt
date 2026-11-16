@@ -1,0 +1,4 @@
+### GET /admin/reentrenar/id-que-no-existe 
+--- respuesta
+{"detail":"no existe la ejecución 'id-que-no-existe'"}
+HTTP 404

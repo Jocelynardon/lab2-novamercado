@@ -1,0 +1,4 @@
+### GET /modelo 
+--- respuesta
+{"nombre":"novamercado_ventas","alias":"champion","version":"1"}
+HTTP 200

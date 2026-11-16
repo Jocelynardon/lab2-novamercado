@@ -1,0 +1,60 @@
+### POST /v1/prediccion (cuerpo: data/ejemplos/errores/E02_familia_otra_forma.json)
+--- solicitud
+{
+  "tienda_id": 5,
+  "fecha": "2025-11-17",
+  "familias": [
+    {
+      "familia_id": "abarrotes",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "bebe",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "bebidas",
+      "en_promocion": 8
+    },
+    {
+      "familia_id": "carnes",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "cuidado_personal",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "Frutas y Verduras",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "LÁCTEOS",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "licores",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "limpieza",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "mascotas",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "panaderia",
+      "en_promocion": 0
+    },
+    {
+      "familia_id": "snacks",
+      "en_promocion": 9
+    }
+  ]
+}
+
+--- respuesta
+{"tienda_id":5,"fecha":"2025-11-17","version_modelo":"1","predicciones":[{"familia_id":"abarrotes","venta_esperada":949.4,"cantidad_sugerida":1234},{"familia_id":"bebe","venta_esperada":62.6,"cantidad_sugerida":82},{"familia_id":"bebidas","venta_esperada":1004.6,"cantidad_sugerida":1256},{"familia_id":"carnes","venta_esperada":207.4,"cantidad_sugerida":191},{"familia_id":"cuidado_personal","venta_esperada":178.8,"cantidad_sugerida":257},{"familia_id":"frutas_verduras","venta_esperada":340.6,"cantidad_sugerida":310},{"familia_id":"lacteos","venta_esperada":419.0,"cantidad_sugerida":423},{"familia_id":"licores","venta_esperada":79.2,"cantidad_sugerida":120},{"familia_id":"limpieza","venta_esperada":206.5,"cantidad_sugerida":279},{"familia_id":"mascotas","venta_esperada":45.7,"cantidad_sugerida":58},{"familia_id":"panaderia","venta_esperada":237.6,"cantidad_sugerida":204},{"familia_id":"snacks","venta_esperada":338.4,"cantidad_sugerida":420}],"calidad":{"estado":"corregido","observaciones":[{"campo":"familias[5].familia_id","accion":"reparar","detalle":"'Frutas y Verduras' se interpretó como 'frutas_verduras'"},{"campo":"familias[6].familia_id","accion":"reparar","detalle":"'LÁCTEOS' se interpretó como 'lacteos'"}]}}
+HTTP 200

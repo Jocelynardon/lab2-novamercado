@@ -1,0 +1,4 @@
+### GET /health 
+--- respuesta
+{"estado":"ok","dependencias":{"base_de_datos":true,"mlflow":true,"airflow":true},"version_modelo":"1"}
+HTTP 200

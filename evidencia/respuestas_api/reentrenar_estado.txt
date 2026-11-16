@@ -1,0 +1,1 @@
+{"estado":"exitoso","promovido":false,"version":"1","motivo":"Costo en validación 84 721 vs 84 636 del vigente (no mejora al menos 1%)"}
